@@ -26,9 +26,15 @@ left at home, right at the office, above in the meeting room. Automatically.
 
 ## Why
 
-macOS remembers display arrangements badly once you move between desks. Plug into the office monitor and it's on the wrong side. Go home and it's wrong again. Join a meeting room and your cursor vanishes off the left edge.
+macOS already saves a layout for each combination of displays it has seen. With one monitor on a direct cable, it usually puts it back where you left it. ScreenSide is for when that isn't enough:
 
-ScreenSide fixes that. Pick a side **once** per monitor (or per place), and from then on every time you plug in, the screen snaps to the right spot.
+- **The same model of monitor in different places.** If home and office have identical monitors (common with company-issued screens), macOS can't tell them apart and has no idea where you are. It uses whichever layout you saved last.
+- **Screens it has never seen.** Meeting rooms and hot desks always get the macOS default, usually on the right.
+- **Docks, adapters and forgotten layouts.** Some hubs change how a monitor identifies itself, and arrangements sometimes get lost after updates or sleep.
+
+Pick a side **once** per monitor or per place. From then on, every time you plug in, ScreenSide re-applies your choice.
+
+> **Do you need it?** If you use a single monitor in one place and macOS already gets it right, probably not. ScreenSide earns its place when you move between desks.
 
 ## Features
 
@@ -104,6 +110,9 @@ Sources/ScreenSide/
 ```
 
 ## FAQ
+
+**Doesn't macOS already do this?**
+Partly. See [Why](#why). macOS remembers a layout per set of displays, but it can't tell identical monitors apart, doesn't know where you are, and can't handle displays it has never seen.
 
 **My laptop lid is closed. Does it do anything?**
 No. With no built-in screen there's nothing to arrange around, so ScreenSide stays out of the way.
